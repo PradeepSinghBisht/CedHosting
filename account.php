@@ -9,7 +9,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	require_once "User.php";
 	$db = new Dbcon();
 	$user = new User();
-	include "header.php";
+	include "header.php"; 
 
 	if (isset($_POST['signup'])) {
 		$name = $_POST['name'];
