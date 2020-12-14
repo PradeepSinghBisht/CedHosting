@@ -12,7 +12,7 @@
         
                 if ($conn->query($sql) === true) {
                     echo '<script>alert("Registered Successfully")</script>';
-                    echo '<script> window.location.href = "login.php" </script>';
+                    echo '<script> window.location.href = "verification.php" </script>';
         
                 } else {
                     echo '<script>alert("'.$conn->error.'")</script>';
@@ -26,6 +26,10 @@
             $result = $conn->query($sql);
 
             return $result;
+        }
+
+        public function updateuser($id, $conn) {
+
         }
     }
 ?>

@@ -74,11 +74,10 @@
 
         public function updateproduct($id, $category, $productname, $pageurl, $available, $monthlyprice, $annualprice, $sku, $description, $conn) {
             
-            $sql = "UPDATE tbl_product SET `prod_parent_id`='".$category."', `prod_name`='".$productname."', `html`='".$pageurl."', `prod_available`='".$available."', `prod_launch_date`='NOW()' WHERE `prod_id`='".$id."'" ;
+            $sql = "UPDATE tbl_product SET `prod_parent_id`='".$category."', `prod_name`='".$productname."', `html`='".$pageurl."', `prod_available`='".$available."', `prod_launch_date`=NOW() WHERE `id`='".$id."'" ;
             $result = $conn->query($sql);
-            print_r($result);
-
-            $sql = "UPDATE tbl_product_description SET `description`=$description,`mon_price`=$monthlyprice ,`annual_price`=$annualprice ,`sku`= $sku WHERE `prod_id`=".$id."";
+            
+            $sql = "UPDATE tbl_product_description SET `description`='".$description."',`mon_price`='".$monthlyprice."' ,`annual_price`='".$annualprice."' ,`sku`= '".$sku."' WHERE `prod_id`='".$id."'";
             
             return $sql;
         }
