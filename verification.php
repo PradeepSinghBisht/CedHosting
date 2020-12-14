@@ -4,6 +4,14 @@
 	require_once "USer.php";
 	$db = new Dbcon();
 	$user = new USer();
+
+	if (isset($_SESSION['userdata'])) {
+		if ($_SESSION['userdata']['is_admin'] == '1') {
+			header('location:/admin/index.php');
+		} 
+	} else {
+		header('location:index.php');
+	}
 	include('header.php');
 
 	if (isset($_POST['submit'])) {

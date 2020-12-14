@@ -1,8 +1,17 @@
 <?php 
+    session_start();
     include '../Product.php';
     include '../Dbcon.php';
     $prod = new Product();
     $db = new Dbcon();
+
+    if (isset($_SESSION['userdata'])) {
+      if ($_SESSION['userdata']['is_admin'] == '0') {
+        header('location:../index.php');
+      } 
+    } else {
+      header('location:../index.php');
+    }
 
     if(isset($_POST['submit'])) {
         $category = $_POST['category'];

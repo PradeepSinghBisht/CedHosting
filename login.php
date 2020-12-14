@@ -11,6 +11,14 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	$db = new Dbcon();
 	$user = new User();
 
+	if (isset($_SESSION['userdata'])) {
+		if ($_SESSION['userdata']['is_admin'] == '1') {
+			header('location:/admin/index.php');
+		} else if ($_SESSION['userdata']['is_admin'] == '0') {
+			header('location:index.php');
+		}
+	}
+
 	if (isset($_POST['submit'])) {
 		$email = $_POST['email'];
 		$password = md5($_POST['password']);

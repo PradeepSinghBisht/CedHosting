@@ -4,6 +4,15 @@
     $prod = new Product();
     $db = new Dbcon();
 
+    session_start();
+  if (isset($_SESSION['userdata'])) {
+		if ($_SESSION['userdata']['is_admin'] == '0') {
+			header('location:../index.php');
+		} 
+	} else {
+    header('location:../index.php');
+  }
+
     if (isset($_GET['action'])) {
         $id = $_GET['id'];
 

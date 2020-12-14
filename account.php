@@ -9,6 +9,14 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	require_once "User.php";
 	$db = new Dbcon();
 	$user = new User();
+
+	if (isset($_SESSION['userdata'])) {
+		if ($_SESSION['userdata']['is_admin'] == '1') {
+			header('location:/admin/index.php');
+		} else if ($_SESSION['userdata']['is_admin'] == '0') {
+			header('location:index.php');
+		}
+	}
 	include "header.php"; 
 
 	if (isset($_POST['signup'])) {
