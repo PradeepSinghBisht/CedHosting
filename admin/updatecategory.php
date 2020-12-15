@@ -5,7 +5,6 @@
     $db = new Dbcon();
     $prod = new Product();
 
-    session_start();
   if (isset($_SESSION['userdata'])) {
 		if ($_SESSION['userdata']['is_admin'] == '0') {
 			header('location:../index.php');
@@ -18,10 +17,9 @@
     if (isset($_POST['submit'])) {
         $id = $_GET['id'];
         $subcategory = $_POST['sub_category_name'];
-        $link = $_POST['link'];
         $available = $_POST['available'];
 
-        $sql = $prod->updatecategory($id, $subcategory, $link, $available, $db->conn);
+        $sql = $prod->updatecategory($id, $subcategory, $available, $db->conn);
 
         if ($db->conn->query($sql) === true) {
             echo '<script> alert("Sub Category Updated Successfully")</script>';
@@ -93,11 +91,7 @@
                                         <input type="text" class="form-control text-dark" placeholder="Enter category"
                                             pattern="^([A-Za-z]+ )+[A-Za-z]+$|^[A-Za-z]+$" name="sub_category_name" value="'.$row['prod_name'].'"required>
                                     </div>
-                                    <div class="form-group">
-                                        <label for="exampleFormControlTextarea1">Page Url</label>
-                                        <input type="text" class="form-control text-dark" placeholder="Enter page link" name="link" value="'.$row['html'].'"
-                                            required>
-                                    </div>
+                                    
                                     <div class="form-group">
                                         <label for="available">Is Available</label>
                                         <select class="form-control" id="available" name="available">

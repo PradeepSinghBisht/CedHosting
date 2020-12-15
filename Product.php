@@ -30,8 +30,8 @@
             return $host;
         }
 
-        public function updatecategory($id, $subcategory, $link, $available, $conn) {
-            $sql = 'UPDATE tbl_product SET `prod_name`="'.$subcategory.'", `html`="'.$link.'", `prod_available`="'.$available.'" WHERE `id`="'.$id.'"';
+        public function updatecategory($id, $subcategory, $available, $conn) {
+            $sql = 'UPDATE tbl_product SET `prod_name`="'.$subcategory.'", `prod_available`="'.$available.'" WHERE `id`="'.$id.'"';
             return $sql;
         }
 
