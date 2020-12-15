@@ -1,15 +1,18 @@
 <?php 
 	session_start();
 	require_once "Dbcon.php";
-	require_once "USer.php";
+	require_once "User.php";
 	$db = new Dbcon();
-	$user = new USer();
+	$user = new User();
 
 	if (isset($_SESSION['userdata'])) {
 		if ($_SESSION['userdata']['is_admin'] == '1') {
-			header('location:/admin/index.php');
-		} 
-	} else {
+			header('location: admin/index.php');
+		} else {
+			header('location:index.php');
+		}
+	} 
+	if (!isset($_SESSION['verify'])) {
 		header('location:index.php');
 	}
 	include('header.php');
@@ -64,8 +67,9 @@
 	if (isset($_POST['verify'])) {
 		$number= $_POST['otp'];
 		if ($_SESSION['session_otp']==$number) {
+			$id = $_SESSION['verify']['id'];
 			$user->updateuser($id, $db->conn);
-			header('Location:login.php');
+			
 		} else {
 			echo "<script type='text/javascript'>alert('OTP Dosen't Match');</script>";
 			unset($_SESSION['mobile']);

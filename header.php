@@ -1,6 +1,6 @@
 <?php 
 	$base = basename($_SERVER['REQUEST_URI']);
-	include 'Product.php';
+	include_once 'Product.php';
 	$prod = new Product();
 ?>
 <!DOCTYPE HTML>
@@ -72,7 +72,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 										<?php 
 											$rows = $prod->fetchallcategory($db->conn);
 											foreach ($rows as $row) {
-												echo '<li><a href="'.$row['html'].'">'.$row['prod_name'].'</a></li>';
+												echo '<li><a href="catpage.php?id='.$row['id'].'">'.$row['prod_name'].'</a></li>';
 											}
 										?>
 									</ul>			

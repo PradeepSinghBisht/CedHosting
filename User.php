@@ -12,7 +12,7 @@
         
                 if ($conn->query($sql) === true) {
                     echo '<script>alert("Registered Successfully")</script>';
-                    echo '<script> window.location.href = "verification.php" </script>';
+                    echo '<script> window.location.href = "login.php" </script>';
         
                 } else {
                     echo '<script>alert("'.$conn->error.'")</script>';
@@ -29,6 +29,16 @@
         }
 
         public function updateuser($id, $conn) {
+            $sql = "UPDATE tbl_user SET `active`='1', `phone_approved`='1' WHERE `id`=$id";
+
+            if ($conn->query($sql) === true) {
+                echo '<script>alert("You Are Activated Now")</script>';
+                unset($_SESSION['verify']);
+			    echo '<script>window.location.href = "login.php"</script>';
+    
+            } else {
+                echo '<script>alert("'.$conn->error.'")</script>';
+            }
 
         }
     }

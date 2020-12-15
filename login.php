@@ -13,7 +13,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 	if (isset($_SESSION['userdata'])) {
 		if ($_SESSION['userdata']['is_admin'] == '1') {
-			header('location:/admin/index.php');
+			header('location:admin/index.php');
 		} else if ($_SESSION['userdata']['is_admin'] == '0') {
 			header('location:index.php');
 		}
@@ -28,6 +28,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		foreach ($rows as $row) {
 	
 			if ($row['active'] == 1 && $row['is_admin'] == 0) {
+				
 				$_SESSION['userdata'] = array('id'=>$row['id'], 'email'=>$row['email'], 'name'=>$row['name'],
 				'mobile'=>$row['mobile'], 'email_approved'=>$row['email_approved'], 
 				'phone_approved'=>$row['phone_approved'],'active'=>$row['active'],
@@ -37,6 +38,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				 header('location: index.php');
 	
 			} else if ($row['active'] == 1 && $row['is_admin'] == 1){
+				
 				$_SESSION['userdata'] = array('id'=>$row['id'],
 				'email'=>$row['email'], 'name'=>$row['name'],
 				'mobile'=>$row['mobile'], 'email_approved'=>$row['email_approved'], 
@@ -47,6 +49,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				header('location: admin/');
 				
 			} else if ($row['active'] == 0){	
+				$_SESSION['verify'] = array('id'=>$row['id'],
+				'email'=>$row['email'], 'mobile'=>$row['mobile'], 'email_approved'=>$row['email_approved'], 
+				'phone_approved'=>$row['phone_approved'],'active'=>$row['active']);
+
 				header('Location: verification.php');
 			}
 		}

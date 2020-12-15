@@ -81,5 +81,11 @@
             
             return $sql;
         }
+
+        public function catpage($id, $conn) {
+            $sql = "SELECT * FROM tbl_product_description INNER JOIN tbl_product on tbl_product_description.prod_id = tbl_product.id WHERE `prod_parent_id`=$id AND `prod_available`='1'";
+            $result = $conn->query($sql);
+            return $result;
+        }
     }
 ?>

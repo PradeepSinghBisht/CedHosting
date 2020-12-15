@@ -5,6 +5,7 @@ License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 -->
 <?php 
+	session_start();
 	require_once "Dbcon.php";
 	require_once "User.php";
 	$db = new Dbcon();
@@ -12,7 +13,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 	if (isset($_SESSION['userdata'])) {
 		if ($_SESSION['userdata']['is_admin'] == '1') {
-			header('location:/admin/index.php');
+			header('location: admin/index.php');
 		} else if ($_SESSION['userdata']['is_admin'] == '0') {
 			header('location:index.php');
 		}

@@ -10,7 +10,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	$db = new Dbcon();
 	if (isset($_SESSION['userdata'])) {
 		if ($_SESSION['userdata']['is_admin'] == '1') {
-			header('location:/admin/index.php');
+			header('location:admin/index.php');
 		} 
 	}
 	include "header.php"; 
