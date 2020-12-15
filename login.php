@@ -49,7 +49,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				header('location: admin/');
 				
 			} else if ($row['active'] == 0){	
-				$_SESSION['verify'] = array('id'=>$row['id'],
+				$_SESSION['verify'] = array('id'=>$row['id'], 'name'=>$row['name'],
 				'email'=>$row['email'], 'mobile'=>$row['mobile'], 'email_approved'=>$row['email_approved'], 
 				'phone_approved'=>$row['phone_approved'],'active'=>$row['active']);
 
