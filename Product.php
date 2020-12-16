@@ -88,5 +88,11 @@
             $result = $conn->query($sql);
             return $result;
         }
+
+        public function cartpage($pid, $conn) {
+            $sql = "SELECT * FROM tbl_product_description INNER JOIN tbl_product on tbl_product_description.prod_id = tbl_product.id WHERE `prod_parent_id`=$pid";
+            $result = $conn->query($sql);
+            return $result;
+        }
     }
 ?>

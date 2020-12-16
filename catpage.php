@@ -18,6 +18,13 @@
 		$rows = $prod->fetchcategory($id, $db->conn);
 		$row = $rows->fetch_assoc();
 	}
+
+	if (isset($_GET['pid'])) {
+		$pid = $_GET['pid'];
+		$rows = $prod->cartpage($pid, $db->conn);
+		
+		print_r($rows);
+	}
     
 ?>
 
@@ -40,7 +47,7 @@
 										$data = json_decode($row['description']);
 
 										echo '<div class="col-md-3 linux-price">
-												<form action="" method="GET">"
+												
 													<div class="linux-top">
 														<h4>'.$row['prod_name'].'</h4>
 													</div>
@@ -56,9 +63,9 @@
 														<li><strong>location</strong> : <img src="images/india.png"></li>
 														</ul>
 													</div>
-													<input type="submit" value="Buy Now"></input>
-													<a href="catpage.php?id='.$row['id'].'">buy now</a>
-												</form>
+													
+													<a href="catpage.php?id='.$id.'&pid='.$row['id'].'">buy now</a>
+												
 											</div>';
 									}
 								?>
