@@ -2,10 +2,10 @@
 -- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Generation Time: Dec 15, 2020 at 03:49 PM
--- Server version: 10.4.14-MariaDB
--- PHP Version: 7.3.21
+-- Host: 127.0.0.1
+-- Generation Time: Dec 16, 2020 at 07:44 PM
+-- Server version: 10.4.13-MariaDB
+-- PHP Version: 7.2.32
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `CedHosting`
+-- Database: `cedhosting`
 --
 
 -- --------------------------------------------------------
@@ -96,7 +96,7 @@ INSERT INTO `tbl_product` (`id`, `prod_parent_id`, `prod_name`, `html`, `prod_av
 (1, 0, 'Hosting', NULL, 1, '2020-12-14 16:55:01'),
 (13, 1, 'Linux Hosting', '<div class=\"linux-section\">\r\n						<div class=\"container\">\r\n							<div class=\"linux-grids\">\r\n								<div class=\"col-md-8 linux-grid\">\r\n								<h2>Linux Hosting</h2>\r\n								<ul>\r\n									<li><span>Unlimited </span> Domains, Disk Space, Bandwidth and Email Addresses</li>\r\n									<li><span>99.9% uptime </span> with dedicated 24/7 technical support</li>\r\n									<li><span>Powered by </span> CloudLinux, cPanel (demo), Apache, MySQL, PHP, Ruby & more</li>\r\n									<li><span>Launch  </span> your business with Rs. 2000* Google AdWords Credit *</li>\r\n									<li><span>30 day </span> Money Back Guarantee</li>\r\n								</ul>\r\n									<a href=\"#product\">view plans</a>\r\n								</div>\r\n								<div class=\"col-md-4 linux-grid1\">\r\n									<img src=\"images/linux.png\" class=\"img-responsive\" alt=\"\"/>\r\n								</div>\r\n								<div class=\"clearfix\"></div>\r\n							</div>\r\n						</div>\r\n					</div>', 1, '2020-12-14 16:55:01'),
 (14, 1, 'Cms Hosting', '<div class=\"linux-section\">\r\n						<div class=\"container\">\r\n							<div class=\"linux-grids\">\r\n								<div class=\"col-md-8 linux-grid\">\r\n								<h2>CMS Hosting</h2>\r\n								<ul>\r\n									<li><span>Unlimited </span> domains, email and disk space</li>\r\n									<li><span>99.9% uptime </span> with dedicated 24/7 technical support</li>\r\n									<li><span>1 click</span> WordPress Installation with cPanel (demo) platform</li>\r\n									<li><span>Launch  </span> your business with Rs. 1000* Google AdWords Credit *</li>\r\n									<li><span>30 day </span> Money Back Guarantee</li>\r\n								</ul>\r\n									<a href=\"#product\">view plans</a>\r\n								</div>\r\n								<div class=\"col-md-4 linux-grid1\">\r\n									<img src=\"images/cms.png\" class=\"img-responsive\" alt=\"\"/>\r\n								</div>\r\n								<div class=\"clearfix\"></div>\r\n							</div>\r\n						</div>\r\n					</div>', 1, '2020-12-14 16:55:01'),
-(15, 1, 'Windows Hosting', '<div class=\"linux-section\">\r\n						<div class=\"container\">\r\n							<div class=\"linux-grids\">\r\n								<div class=\"col-md-8 linux-grid\">\r\n								<h2>Windows Hosting</h2>\r\n								<ul>\r\n									<li>Disk Space, Bandwidth and Email Addresses</li>\r\n									<li><span>99.9% uptime </span> with dedicated 24/7 technical support</li>\r\n									<li><span>Powered by </span> CloudLinux, cPanel (demo), Apache, MySQL, PHP, Ruby & more</li>\r\n									<li><span>Launch  </span> your business with Rs. 2000* Google AdWords Credit *</li>\r\n									<li><span>30 day </span> Money Back Guarantee</li>\r\n								</ul>\r\n									<a href=\"#product\">view plans</a>\r\n								</div>\r\n								<div class=\"col-md-4 linux-grid1\">\r\n									<img src=\"images/window.png\" class=\"img-responsive\" alt=\"\"/>\r\n								</div>\r\n								<div class=\"clearfix\"></div>\r\n							</div>\r\n						</div>\r\n					</div>', 0, '2020-12-14 16:55:01'),
+(15, 1, 'Windows Hosting', '<div class=\"linux-section\"> 						<div class=\"container\"> 							<div class=\"linux-grids\"> 								<div class=\"col-md-8 linux-grid\"> 								<h2>Windows Hosting</h2> 								<ul> 									<li>Disk Space, Bandwidth and Email Addresses</li> 									<li><span>99.9% uptime </span> with dedicated 24/7 technical support</li> 									<li><span>Powered by </span> CloudLinux, cPanel (demo), Apache, MySQL, PHP, Ruby & more</li> 									<li><span>Launch  </span> your business with Rs. 2000* Google AdWords Credit *</li> 									<li><span>30 day </span> Money Back Guarantee</li> 								</ul> 									<a href=\"#\">view plans</a> 								</div> 								<div class=\"col-md-4 linux-grid1\"> 									<img src=\"images/window.png\" class=\"img-responsive\" alt=\"\"/> 								</div> 								<div class=\"clearfix\"></div> 							</div> 						</div> 					</div>', 1, '2020-12-14 16:55:01'),
 (16, 1, 'Wordpress Hosting', '<div class=\"linux-section\">\r\n						<div class=\"container\">\r\n							<div class=\"linux-grids\">\r\n								<div class=\"col-md-8 linux-grid\">\r\n								<h2>Wordpress Hosting</h2>\r\n								<ul>\r\n									<li><span>Unlimited </span> domains, email and disk space</li>\r\n									<li><span>99.9% uptime </span> with dedicated 24/7 technical support</li>\r\n									<li><span>1 click</span> WordPress Installation with cPanel (demo) platform</li>\r\n									<li><span>Launch  </span> your business with Rs. 1000* Google AdWords Credit *</li>\r\n									<li><span>30 day </span> Money Back Guarantee</li>\r\n								</ul>\r\n									<a href=\"#product\">view plans</a>\r\n								</div>\r\n								<div class=\"col-md-4 linux-grid1\">\r\n									<img src=\"images/word.png\" class=\"img-responsive\" alt=\"\"/>\r\n								</div>\r\n								<div class=\"clearfix\"></div>\r\n							</div>\r\n						</div>\r\n					</div>', 1, '2020-12-14 16:55:01'),
 (21, 13, 'Standard', 'iphone.com', 1, '2020-12-15 11:48:23'),
 (24, 14, 'Advanced', 'IphoneX1.com', 1, '2020-12-15 11:49:38'),
@@ -195,11 +195,12 @@ CREATE TABLE `tbl_user` (
 --
 
 INSERT INTO `tbl_user` (`id`, `email`, `name`, `mobile`, `email_approved`, `phone_approved`, `active`, `is_admin`, `sign_up_date`, `password`, `security_question`, `security_answer`) VALUES
-(1, 'pradeep.bishtsingh53@gmail.com', 'Pradeep Singh Bisht', '8960406682', 1, 1, 1, 1, '2020-12-10 20:08:17', '640aa1f7ae8c59546d1e4c7a90120c41', 'What is Your Best Friend Name', 'ZNMD'),
+(1, 'pradeep.bishtsingh53@gmail.com', 'Pradeep Singh Bisht', '8960406682', 1, 0, 0, 1, '2020-12-10 20:08:17', '640aa1f7ae8c59546d1e4c7a90120c41', 'What is Your Best Friend Name', 'ZNMD'),
 (2, 'sameerkhan@gmail.com', 'Sameer Khan', '9999999999', 0, 1, 1, 0, '2020-12-11 10:31:03', '5d0755ca4682dc4d38284c89b15aa0cf', 'What is Your Best Friend Name', 'smr'),
 (6, 'shobha@gmail.com', 'Shobha', '7355035988', 0, 1, 1, 0, '2020-12-14 18:49:00', '72354bbdb706b1c47df41c886c9c99a1', 'What Was The First Book You Ever Read', 'shobha'),
 (7, 'rajiv@gmail.com', 'Rajiv', '9889798189', 0, 0, 0, 0, '2020-12-14 20:00:53', '122ba0c0b14db2d86447f54fcd803bac', 'What Was The First Book You Ever Read', 'rajiv'),
-(10, 'avinash@gmail.com', 'Avinash Sharma', '8234567891', 0, 0, 0, 0, '2020-12-15 13:19:34', '9333f7983b47987462531f268e661548', 'What Was The First Book You Ever Read', 'avi');
+(10, 'avinash@gmail.com', 'Avinash Sharma', '8234567891', 0, 0, 0, 0, '2020-12-15 13:19:34', '9333f7983b47987462531f268e661548', 'What Was The First Book You Ever Read', 'avi'),
+(11, 'srivastava.abhi17@gmail.com', 'Abhishek Srivastava', '8933877097', 0, 0, 0, 0, '2020-12-15 21:28:31', '5559e198d7a24841cae9cf5bf1f1d89e', 'What Was The First Book You Ever Read', 'shubham');
 
 -- --------------------------------------------------------
 
@@ -340,7 +341,7 @@ ALTER TABLE `tbl_state`
 -- AUTO_INCREMENT for table `tbl_user`
 --
 ALTER TABLE `tbl_user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `tbl_user_billing_add`
