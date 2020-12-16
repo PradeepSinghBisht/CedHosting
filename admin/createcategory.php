@@ -15,9 +15,8 @@
 
     if(isset($_POST['submit'])){
         $subcategory=$_POST['sub_category_name'];
-        $link=$_POST['link'];
-
-        $sql = $prod->createcategory($subcategory, $link, $db->conn);
+        $html = $_POST['html'];
+        $sql = $prod->createcategory($subcategory, $html, $db->conn);
 
         if ($db->conn->query($sql) === true) {
             echo '<script>alert("Sub Category Added Successfully")</script>';
@@ -98,11 +97,16 @@
                             pattern="^([A-Za-z]+ )+[A-Za-z]+$|^[A-Za-z]+$" name='sub_category_name' required>
                     </div>
                     <div class="form-group">
-                        <label for="exampleFormControlTextarea1">Page Url</label>
-                        <input type='text' class="form-control text-dark" placeholder="Enter page link" name='link'
-                            required>
+                        <label for="exampleFormControlTextarea1">Html</label>
+                        <div class="row justify-content-md-center">
+                                        <div class="col-md-12 col-lg-8">
+                                            <div class="form-group">
+                                                <textarea id="editor" name="html"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
                     </div>
-                    <input type='submit' value='Submit' name='submit' class='btn btn-success mb-4'>
+                    <input type='submit' value='Submit' name='submit' id="submit" class='btn btn-success mb-4'>
                   
                 </form>
 
@@ -166,10 +170,24 @@
             </div>
         </div>
     </div>
+
+    <script src="https://cdn.tiny.cloud/1/prhu8vmekb53uh6bd9qmwt92jmfep8sor7waatdov6jtjzk0/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+    <script>
+    tinymce.init({
+      selector: 'textarea#editor',
+      plugins: 'a11ychecker advcode casechange formatpainter linkchecker autolink lists checklist media mediaembed pageembed permanentpen powerpaste image table advtable tinycomments tinymcespellchecker',
+      toolbar: 'a11ycheck addcomment showcomments casechange checklist code formatpainter pageembed permanentpen table',
+      toolbar_mode: 'floating',
+      tinycomments_mode: 'embedded',
+      tinycomments_author: 'Author name',
+   });
+  </script>
+                            
     <!-- Footer -->
     <?php include './footer.php'; ?>
-    <link rel="stylesheet" href="style.css" type="text/css">
 
+    <link rel="stylesheet" href="style.css" type="text/css">
+    
     </body>
 
     </html>

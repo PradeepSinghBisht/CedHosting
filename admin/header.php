@@ -17,120 +17,120 @@
 <html>
 
 <head>
- <meta charset="utf-8">
- 
- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
- <meta name="description" content="Start your development with a Dashboard for Bootstrap 4.">
- <meta name="author" content="Creative Tim">
- <title>Admin</title>
- <!-- Favicon -->
- <link rel="icon" href="./assets/img/brand/favicon.png" type="image/png">
- <!-- Fonts -->
- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
- <!-- Icons -->
- <link rel="stylesheet" href="./assets/vendor/nucleo/css/nucleo.css" type="text/css">
- <link rel="stylesheet" href="./assets/vendor/@fortawesome/fontawesome-free/css/all.min.css" type="text/css">
- <!-- Page plugins -->
- <!-- Argon CSS -->
- <link rel="stylesheet" href="./assets/css/argon.css?v=1.2.0" type="text/css">
+    <meta charset="utf-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Start your development with a Dashboard for Bootstrap 4.">
+    <meta name="author" content="Creative Tim">
+    <title>Admin</title>
+    <!-- Favicon -->
+    <link rel="icon" href="./assets/img/brand/favicon.png" type="image/png">
+    <!-- Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
+    <!-- Icons -->
+    <link rel="stylesheet" href="./assets/vendor/nucleo/css/nucleo.css" type="text/css">
+    <link rel="stylesheet" href="./assets/vendor/@fortawesome/fontawesome-free/css/all.min.css" type="text/css">
+    <!-- Page plugins -->
+    <!-- Argon CSS -->
+    <link rel="stylesheet" href="./assets/css/argon.css?v=1.2.0" type="text/css">
  
 </head>
 
 <body>
  <!-- Sidenav -->
- <nav class="sidenav navbar navbar-vertical fixed-left navbar-expand-xs navbar-light bg-white" id="sidenav-main">
- <div class="scrollbar-inner">
- <!-- Brand -->
- <div class="sidenav-header align-items-center">
- <a class="navbar-brand" href="javascript:void(0)">
- <img src="./assets/img/brand/blue.png" class="navbar-brand-img" alt="...">
- </a>
- </div>
- <div class="navbar-inner">
+    <nav class="sidenav navbar navbar-vertical fixed-left navbar-expand-xs navbar-light bg-white" id="sidenav-main">
+    <div class="scrollbar-inner">
+    <!-- Brand -->
+        <div class="sidenav-header align-items-center">
+            <a class="navbar-brand" href="javascript:void(0)" style="padding-top: 3px;">
+                <img src="../CedHosting.png" class="navbar-brand-img" alt="..." style="max-height: 6rem;">
+            </a>
+        </div>
+    <div class="navbar-inner">
  <!-- Collapse -->
- <div class="collapse navbar-collapse" id="sidenav-collapse-main">
- <!-- Nav items -->
- <ul class="navbar-nav">
- <li class="nav-item">
- <a class="nav-link active" href="dashboard.php">
- <i class="ni ni-tv-2 text-primary"></i>
- <span class="nav-link-text">Dashboard</span>
- </a>
- </li>
+    <div class="collapse navbar-collapse" id="sidenav-collapse-main">
+    <!-- Nav items -->
+    <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link active" href="dashboard.php">
+                <i class="ni ni-tv-2 text-primary"></i>
+                <span class="nav-link-text">Dashboard</span>
+            </a>
+        </li>
  
- <div class="dropdown">
- <div class="nav-link dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown"
- aria-haspopup="true" aria-expanded="false">
- <i class="fa fa-magnet" aria-hidden="true"></i>
- Product
- </div>
- <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
- <li class="nav-item"><a class="dropdown-item" href="createcategory.php">Create Category</a></li>
- <li class="nav-item"><a class="dropdown-item" href="addproduct.php">Add Product</a></li>
- <li class="nav-item"><a class="dropdown-item" href="viewproducts.php">View Product</a></li>
- <li class="nav-item"><a class="dropdown-item" href="createnewoffers.php">Create New Offers</a></li>
- </div>
- </div>
+    <div class="dropdown">
+        <div class="nav-link dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            <i class="fa fa-magnet" aria-hidden="true"></i>
+            Product
+        </div>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <li class="nav-item"><a class="dropdown-item" href="createcategory.php">Create Category</a></li>
+            <li class="nav-item"><a class="dropdown-item" href="addproduct.php">Add Product</a></li>
+            <li class="nav-item"><a class="dropdown-item" href="viewproducts.php">View Product</a></li>
+            <li class="nav-item"><a class="dropdown-item" href="createnewoffers.php">Create New Offers</a></li>
+        </div>
+    </div>
 
- <div class="dropdown">
- <div class="nav-link dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown"
- aria-haspopup="true" aria-expanded="false">
- <i class="fa fa-envelope-open" aria-hidden="true"></i>
- 
- Orders
- </div>
- <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
- <li class="nav-item"><a class="dropdown-item" href="pendingorders.php">Pending Orders</a></li>
- <li class="nav-item"><a class="dropdown-item" href="completedorders.php">Completed Orders</a></li>
- <li class="nav-item"><a class="dropdown-item" href="cancelledorders.php">Cancelled Orders</a></li>
- <li class="nav-item"><a class="dropdown-item" href="generateinvoice.php">Generate Invoice</a></li>
- </div>
- </div>
- <div class="dropdown">
- <div class="nav-link dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown"
- aria-haspopup="true" aria-expanded="false">
- <i class="fa fa-server" aria-hidden="true"></i>
- Service
- </div>
- <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
- <li class="nav-item"><a class="dropdown-item" href="activeservices.php">Active Services</a></li>
- <li class="nav-item"><a class="dropdown-item" href="expiredservices.php">Expired Services</a></li>
- </div>
- </div>
- <div class="dropdown">
- <div class="nav-link dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown"
- aria-haspopup="true" aria-expanded="false">
- <i class="fa fa-user" aria-hidden="true"></i>
- User
- </div>
- <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
- <li class="nav-item"><a class="dropdown-item" href="alluserlist.php">All User List</a></li>
- <li class="nav-item"><a class="dropdown-item" href="createnewuser.php">Create New User</a></li>
- </div>
- </div>
- <div class="dropdown">
- <div class="nav-link dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown"
- aria-haspopup="true" aria-expanded="false">
- <i class="fa fa-rss" aria-hidden="true"></i>
- Blog
- </div>
- <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
- <li class="nav-item"><a class="dropdown-item" href="addnewblog.php">Add New Blog</a></li>
- <li class="nav-item"><a class="dropdown-item" href="viewallblogs.php">View All Blogs</a></li>
- </div>
- </div>
- <div class="dropdown">
- <div class="nav-link dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown"
- aria-haspopup="true" aria-expanded="false">
- <i class="fa fa-unlock" aria-hidden="true"></i>
- Accounts
- </div>
- <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
- <li class="nav-item"><a class="dropdown-item" href="updatecompanyinfo.php">Update Company Info</a></li>
- <li class="nav-item"><a class="dropdown-item" href="changesecurityquestions.php">Change Security Question</a></li>
- <li class="nav-item"><a class="dropdown-item" href="changepassword.php">Change Password</a></li>
- </div>
- </div>
+    <div class="dropdown">
+        <div class="nav-link dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            <i class="fa fa-envelope-open" aria-hidden="true"></i>
+            
+            Orders
+        </div>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <li class="nav-item"><a class="dropdown-item" href="pendingorders.php">Pending Orders</a></li>
+            <li class="nav-item"><a class="dropdown-item" href="completedorders.php">Completed Orders</a></li>
+            <li class="nav-item"><a class="dropdown-item" href="cancelledorders.php">Cancelled Orders</a></li>
+            <li class="nav-item"><a class="dropdown-item" href="generateinvoice.php">Generate Invoice</a></li>
+        </div>
+    </div>
+    <div class="dropdown">
+        <div class="nav-link dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            <i class="fa fa-server" aria-hidden="true"></i>
+            Service
+        </div>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <li class="nav-item"><a class="dropdown-item" href="activeservices.php">Active Services</a></li>
+            <li class="nav-item"><a class="dropdown-item" href="expiredservices.php">Expired Services</a></li>
+        </div>
+    </div>
+    <div class="dropdown">
+        <div class="nav-link dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            <i class="fa fa-user" aria-hidden="true"></i>
+            User
+        </div>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <li class="nav-item"><a class="dropdown-item" href="alluserlist.php">All User List</a></li>
+            <li class="nav-item"><a class="dropdown-item" href="createnewuser.php">Create New User</a></li>
+        </div>
+    </div>
+    <div class="dropdown">
+        <div class="nav-link dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            <i class="fa fa-rss" aria-hidden="true"></i>
+            Blog
+        </div>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <li class="nav-item"><a class="dropdown-item" href="addnewblog.php">Add New Blog</a></li>
+            <li class="nav-item"><a class="dropdown-item" href="viewallblogs.php">View All Blogs</a></li>
+        </div>
+    </div>
+    <div class="dropdown">
+        <div class="nav-link dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            <i class="fa fa-unlock" aria-hidden="true"></i>
+            Accounts
+        </div>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <li class="nav-item"><a class="dropdown-item" href="updatecompanyinfo.php">Update Company Info</a></li>
+            <li class="nav-item"><a class="dropdown-item" href="changesecurityquestions.php">Change Security Question</a></li>
+            <li class="nav-item"><a class="dropdown-item" href="changepassword.php">Change Password</a></li>
+        </div>
+    </div>
  
  </ul>
  <!-- Divider -->
@@ -352,7 +352,7 @@
  <img alt="Image placeholder" src="./assets/img/theme/team-4.jpg">
  </span>
  <div class="media-body ml-2 d-none d-lg-block">
- <span class="mb-0 text-sm font-weight-bold">John Snow</span>
+ <span class="mb-0 text-sm font-weight-bold"><?php echo $_SESSION['userdata']['name'];?></span>
  </div>
  </div>
  </a>

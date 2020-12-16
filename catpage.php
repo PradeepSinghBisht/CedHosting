@@ -40,22 +40,25 @@
 										$data = json_decode($row['description']);
 
 										echo '<div class="col-md-3 linux-price">
-												<div class="linux-top">
-													<h4>'.$row['prod_name'].'</h4>
-												</div>
-												<div class="linux-bottom">
-													<h5> Rs. '.$row['mon_price'].' <span class="month">per month</span></h5>
-													<h3> Rs. '.$row['annual_price'].' <span class="month">per Year</span></h3>
-													<h6>'.$data->domain.' Domain</h6>
-													<ul>
-													<li><strong>'.$data->webspaces.'</strong> GB Disk Space</li>
-													<li><strong>'.$data->bandwidth.'</strong> GB Data Transfer</li>
-													<li><strong>'.$data->mailbox.'</strong> Email Accounts</li>
-													<li><strong>'.$data->language.'</strong>  Language Support</li>
-													<li><strong>location</strong> : <img src="images/india.png"></li>
-													</ul>
-												</div>
-												<a href="#">buy now</a>
+												<form action="" method="GET">"
+													<div class="linux-top">
+														<h4>'.$row['prod_name'].'</h4>
+													</div>
+													<div class="linux-bottom">
+														<h5> Rs. '.$row['mon_price'].' <span class="month">per month</span></h5>
+														<h3> Rs. '.$row['annual_price'].' <span class="month">per Year</span></h3>
+														<h6>'.$data->domain.' Domain</h6>
+														<ul>
+														<li><strong>'.$data->webspaces.'</strong> GB Disk Space</li>
+														<li><strong>'.$data->bandwidth.'</strong> GB Data Transfer</li>
+														<li><strong>'.$data->mailbox.'</strong> Email Accounts</li>
+														<li><strong>'.$data->language.'</strong>  Language Support</li>
+														<li><strong>location</strong> : <img src="images/india.png"></li>
+														</ul>
+													</div>
+													<input type="submit" value="Buy Now"></input>
+													<a href="catpage.php?id='.$row['id'].'">buy now</a>
+												</form>
 											</div>';
 									}
 								?>

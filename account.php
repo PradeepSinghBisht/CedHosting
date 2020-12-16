@@ -18,7 +18,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			header('location:index.php');
 		}
 	}
-	include "header.php"; 
+	include "header.php";
 
 	if (isset($_POST['signup'])) {
 		$name = $_POST['name'];

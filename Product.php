@@ -8,9 +8,9 @@
 
         }
 
-        public function createcategory($subcategory, $link, $conn) {
+        public function createcategory($subcategory, $html, $conn) {
             $sql = 'INSERT INTO tbl_product(`prod_parent_id`,`prod_name`,`html`,`prod_available`,`prod_launch_date`)
-                 Values("1","'.$subcategory.'","'.$link.'","1",NOW())';
+                 Values("1","'.$subcategory.'","'.$html.'","1",NOW())';
 
             return $sql;
         }
@@ -30,8 +30,9 @@
             return $host;
         }
 
-        public function updatecategory($id, $subcategory, $available, $conn) {
-            $sql = 'UPDATE tbl_product SET `prod_name`="'.$subcategory.'", `prod_available`="'.$available.'" WHERE `id`="'.$id.'"';
+        public function updatecategory($id, $subcategory, $available, $html, $conn) {
+            
+            $sql = 'UPDATE tbl_product SET `prod_name`="'.$subcategory.'", `prod_available`="'.$available.'",`html`="'.$html.'" WHERE `id`="'.$id.'"';
             return $sql;
         }
 
