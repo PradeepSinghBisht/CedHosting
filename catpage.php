@@ -20,12 +20,16 @@
 	}
 
 	if (isset($_GET['pid'])) {
-		$pid = $_GET['pid'];
-		$rows = $prod->cartpage($pid, $db->conn);
 		
-		print_r($rows);
+		$pid = $_GET['pid'];
+		$r = $prod->cartpage($pid, $db->conn);
+
+		$cart = array('id'=>$r['id'], 'name'=>$r['prod_name'], 'sku'=>$r['sku'], 'quantity'=>1, 'price'=>$r['mon_price'], 'billing'=>'Monthly');
+		
+		$_SESSION['cart'][$pid] = $cart;
+
+		echo '<script>window.location.href="cart.php"</script>';
 	}
-    
 ?>
 
 	<!---singleblog--->
@@ -56,11 +60,11 @@
 														<h3> Rs. '.$row['annual_price'].' <span class="month">per Year</span></h3>
 														<h6>'.$data->domain.' Domain</h6>
 														<ul>
-														<li><strong>'.$data->webspaces.'</strong> GB Disk Space</li>
-														<li><strong>'.$data->bandwidth.'</strong> GB Data Transfer</li>
-														<li><strong>'.$data->mailbox.'</strong> Email Accounts</li>
-														<li><strong>'.$data->language.'</strong>  Language Support</li>
-														<li><strong>location</strong> : <img src="images/india.png"></li>
+															<li><strong>'.$data->webspaces.'</strong> GB Disk Space</li>
+															<li><strong>'.$data->bandwidth.'</strong> GB Data Transfer</li>
+															<li><strong>'.$data->mailbox.'</strong> Email Accounts</li>
+															<li><strong>'.$data->language.'</strong>  Language Support</li>
+															<li><strong>location</strong> : <img src="images/india.png"></li>
 														</ul>
 													</div>
 													
