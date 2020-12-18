@@ -97,7 +97,7 @@
 			<p>Thanks for Registration.</p>
 			<p><a style='background:#0087ff;color:white;padding:5px;text-decoration:none;' href='".$link."'>CLICK TO ACTIVATE YOUR ACCOUNT</a></p>";
 		
-			$robo = 'patwalshobha996@gmail.com';
+			$robo = '#email'; // email
 			$developmentMode = true;
 			$mailer = new PHPMailer($developmentMode);
 			try {
@@ -114,11 +114,11 @@
 				}
 				$mailer->Host = 'ssl://smtp.gmail.com';
 				$mailer->SMTPAuth = true;
-				$mailer->Username = 'patwalshobha996@gmail.com';
-				$mailer->Password = 'p@tw@l2406';
+				$mailer->Username = '#email'; //email
+				$mailer->Password = '#password'; //password
 				$mailer->SMTPSecure = 'tls';
 				$mailer->Port = 465;
-				$mailer->setfrom('patwalshobha996@gmail.com', 'Shobha Patwal');
+				$mailer->setfrom('#email', '#name'); //email
 				$mailer->addAddress($email, $name);
 				$mailer->isHTML(true);
 				$mailer->Subject = 'Email Verifcation';

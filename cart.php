@@ -23,12 +23,12 @@
                     <div class="about-grids">
                         <table style="width:100%">
                             <tr>
-                                <th>S.No.</th>
-                                <th>Product SKU</th>
+                                <th>Id</th>
                                 <th>Product Name</th>
-                                <th>Quantity</th>
-                                <th>Price</th>
+                                <th>Product Category</th>
+                                <th>SKU</th>
                                 <th>Billing Cycle</th>
+                                <th>Amount</th>
                                 <th>Action</th>
                             </tr>
                             <?php $count = 0;
@@ -36,14 +36,15 @@
                                 foreach($_SESSION['cart'] as $key=>$value) {
                                     $count++;
                                     echo '<tr>
-                                            <td>'.$count.'</td>
-                                            <td>'.$_SESSION['cart'][$key]['sku'].'</td>
+                                            
+                                            <td>'.$_SESSION['cart'][$key]['id'].'</td>
                                             <td>'.$_SESSION['cart'][$key]['name'].'</td>
-                                            <td>'.$_SESSION['cart'][$key]['quantity'].'</td>
-                                            <td>'.$_SESSION['cart'][$key]['price'].'</td>
+                                            <td>'.$_SESSION['cart'][$key]['category'].'</td>
+                                            <td>'.$_SESSION['cart'][$key]['sku'].'</td>
                                             <td>'.$_SESSION['cart'][$key]['billing'].'</td>
-                                            <td><a>Edit</a>
-                                            <a onClick="javascript: return confirm(\'Are You Sure to delete?\');" href="cart.php?id='.$_SESSION['cart'][$key]['id'].'&action=delete">Delete</a></td>
+                                            <td>Rs. '.$_SESSION['cart'][$key]['price'].'</td>
+                                            <td>
+                                            <a onClick="javascript: return confirm(\'Are You Sure to delete?\');" href="cart.php?id='.$_SESSION['cart'][$key]['id'].'&action=delete">Remove</a></td>
                                         </tr>';
                                 }
                             }

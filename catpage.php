@@ -23,8 +23,8 @@
 		
 		$pid = $_GET['pid'];
 		$r = $prod->cartpage($pid, $db->conn);
-
-		$cart = array('id'=>$r['id'], 'name'=>$r['prod_name'], 'sku'=>$r['sku'], 'quantity'=>1, 'price'=>$r['mon_price'], 'billing'=>'Monthly');
+		
+		$cart = array('id'=>$r['id'], 'name'=>$r['prod_name'], 'category'=>$row['prod_name'], 'sku'=>$r['sku'], 'price'=>$r['mon_price'], 'billing'=>'Monthly');
 		
 		$_SESSION['cart'][$pid] = $cart;
 
